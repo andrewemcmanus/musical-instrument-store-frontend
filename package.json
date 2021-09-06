@@ -3,15 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next -p 7777",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start -p 7777",
+    "test": "NODE_ENV=test jest --watch"
   },
   "dependencies": {
+    "@apollo/client": "^3.4.10",
+    "@apollo/link-error": "^2.0.0-beta.3",
+    "@apollo/react-ssr": "^4.0.0",
+    "apollo": "^2.33.6",
+    "apollo-upload-client": "^16.0.0",
+    "babel-eslint": "^10.1.0",
+    "downshift": "^6.1.7",
+    "graphql": "^14.7.0",
+    "graphql-tag": "^2.12.4",
+    "graphql-upload": "^12.0.0",
     "next": "11.1.2",
+    "next-with-apollo": "^5.2.1",
+    "nprogress": "^0.2.0",
+    "prettier": "^2.3.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-test-renderer": "^17.0.2",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "eslint": "7.32.0",
