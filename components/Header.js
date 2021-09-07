@@ -1,6 +1,6 @@
 import Link from 'next/Link';
 import styled from 'styled-components';
-// import Nav from './Nav
+import Nav from './Nav';
 // import Cart from './Cart
 
 const Logo = styled.h1`
