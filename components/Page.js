@@ -52,7 +52,7 @@ export default function Page({ children, cool }) {
     return (
         <div>
             <GlobalStyles />
-            <Header />
+                <Header />
             <InnerStyles>{children}</InnerStyles>
             {/* <SingleProduct /> */}
         </div>
