@@ -4,7 +4,8 @@ import { CartStateProvider } from "../lib/cartState";
 import Router from 'next/Router';
 import NProgress from "nprogress";
 import withData from '../lib/withData';
-// import '../components/styles/nprogress.css'
+import '../components/styles/nprogress.css'
+
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
