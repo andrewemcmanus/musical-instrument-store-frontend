@@ -1,7 +1,10 @@
 import { useQuery } from "@apollo/client";
 import gql from "graphql-tag";
 import { Head } from "next/Document";
+// import Head from 'next/head';
+import Link from "next/Link";
 import { perPage } from "../next.config";
+import DisplayError from "./ErrorMessage";
 import PaginationStyles from "./styles/PaginationStyles";
 
 export const PAGINATION_QUERY = gql`
@@ -25,9 +28,17 @@ export default function Pagination({ page }) {
     return (
         <PaginationStyles>
             <Head>
-                <title></title>
+                <title>Musical Instruments - Page {page} pf {pageCount}</title>
             </Head>
-
+{/* A weird quirk of Next.js: you have to use <a> tags for attributes other than href */}
+            <Link href={`/products/${page - 1}`}>
+                <a aria-disabled={page <= 1}>Prev</a>
+            </Link>
+                <p>Page {page} of {pageCount}</p>
+                <p>Total Items: {count}</p>
+            <Link href={`/products/${page + 1}`}>
+                <a aria-disabled={page >= pageCount}>Next</a>
+            </Link>
         </PaginationStyles>
     )
 }
